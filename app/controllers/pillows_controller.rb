@@ -1,0 +1,2 @@
+class PillowsController < ApplicationController
+end
