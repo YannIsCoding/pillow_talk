@@ -1,1 +1,8 @@
 <h1>Those are all our lovely pillow!</h1>
+<ul>
+  <% @pillows.each do |pillow| %>
+  <li>
+    <%= pillow.name %>
+  </li>
+  <% end %>
+</ul>

@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Pillow.create(name: "chunky bacon twist")
-Pillow.create(name: "butt pillow")
-Pillow.create(name: "Super pillow")
-Pillow.create(name: "Shitty pillow")
-Pillow.create(name: "Blabla pillow")
+Pillow.create(name: "chunky bacon twist", category: "blabla", address: ' chunky bacon street', image: 'image bacon')
+Pillow.create(name: "butt pillow", category: "blabla", address: ' chunky bacon street', image: 'image bacon')
+Pillow.create(name: "Super pillow", category: "blabla", address: ' chunky bacon street', image: 'image bacon')
+Pillow.create(name: "Shitty pillow", category: "blabla", address: ' chunky bacon street', image: 'image bacon')
+Pillow.create(name: "Blabla pillow", category: "blabla", address: ' chunky bacon street', image: 'image bacon')
