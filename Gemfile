@@ -30,3 +30,4 @@ group :development, :test do
 end
 
 gem 'devise'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
