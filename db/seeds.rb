@@ -1,7 +1,29 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts 'Cleaning database...'
+Pillow.destroy_all
+
+puts 'Creating Pillows...'
+pillows_attributes = [
+  {
+    address:      '7 Boundary St, London E2 7JE',
+    category:     'chinese',
+  },
+  {
+    address:      '14 Apple St, London 8 34k',
+    category:     'chinese',
+
+  },
+  {
+    address:      '21 minis St, London E2 7JE',
+    category:     'chinese',
+  },
+  {
+    address:      '28 Fun St, London E2 7JE',
+    category:     'chinese',
+  },
+  {
+    address:      '35 Bound St, London E2 7JE',
+    category:     'chinese',
+  }
+]
+Pillow.create!(pillows_attributes)
+puts 'Finished!'
