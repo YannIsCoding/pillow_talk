@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Pillow.create(name: "chunky bacon twist", category: "blabla", address: ' chunky bacon street', image: 'image bacon')
+Pillow.create(name: "butt pillow", category: "blabla", address: ' chunky bacon street', image: 'image bacon')
+Pillow.create(name: "Super pillow", category: "blabla", address: ' chunky bacon street', image: 'image bacon')
+Pillow.create(name: "Shitty pillow", category: "blabla", address: ' chunky bacon street', image: 'image bacon')
+Pillow.create(name: "Blabla pillow", category: "blabla", address: ' chunky bacon street', image: 'image bacon')
