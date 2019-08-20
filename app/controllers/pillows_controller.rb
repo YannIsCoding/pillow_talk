@@ -5,6 +5,10 @@ class PillowsController < ApplicationController
     @pillows = Pillow.all
   end
 
+  def show
+    @pillow = Pillow.find(params[:id])
+  end
+
   def new
     @pillow = Pillow.new
   end
