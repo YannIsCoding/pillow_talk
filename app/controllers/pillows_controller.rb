@@ -25,6 +25,6 @@ class PillowsController < ApplicationController
   private
 
   def pillow_params
-    params.require(:pillow).permit(:address, :category, :image)
+    params.require(:pillow).permit(:address, :category, :photo)
   end
 end
