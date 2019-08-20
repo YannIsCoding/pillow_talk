@@ -32,7 +32,7 @@ puts 'Oh data destroyed'
 10.times do
   user = User.new(
     full_name: name_user.sample,
-    image: image_user.sample,
+    photo: image_user.sample,
     email: Faker::Internet.email,
     password: '123456'
   )
@@ -45,7 +45,7 @@ end
     description: description,
     address: Faker::Address.full_address,
     category: category.sample,
-    image: image_pillow.sample,
+    photo: image_pillow.sample,
     user_id: User.all.sample.id
   )
   pillow.save!
