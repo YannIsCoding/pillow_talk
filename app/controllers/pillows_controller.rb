@@ -15,7 +15,6 @@ class PillowsController < ApplicationController
 
   def create
     @pillow = Pillow.new(pillow_params)
-    # @pillow.user_id = current_user.id
     if @pillow.save
       redirect_to pillows_path
     else
