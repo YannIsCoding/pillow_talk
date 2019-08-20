@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 require 'faker'
 
 date = Time.at(rand * Time.now.to_i)
@@ -68,3 +69,4 @@ end
   )
   review.save!
 end
+
