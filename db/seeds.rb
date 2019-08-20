@@ -25,8 +25,8 @@ image_user = ['https://cdn-img.instyle.com/sites/default/files/images/2019/04/me
 
 content = ['nice', 'bad', 'awesome', 'ok', '10 from 10', 'awful']
 
-User.destroy_all
 Pillow.destroy_all
+User.destroy_all
 puts 'Oh data destroyed'
 
 10.times do
@@ -45,7 +45,7 @@ end
     description: description,
     address: Faker::Address.full_address,
     category: category.sample,
-    photo: image_pillow.sample,
+    remote_photo_url: image_pillow.sample,
     user_id: User.all.sample.id
   )
   pillow.save!
