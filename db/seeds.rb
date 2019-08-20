@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 require 'faker'
 
 date = Time.at(rand * Time.now.to_i)
@@ -33,24 +25,9 @@ image_user = ['https://cdn-img.instyle.com/sites/default/files/images/2019/04/me
 
 content = ['nice', 'bad', 'awesome', 'ok', '10 from 10', 'awful']
 
-10.times do
-  pillow = Pillow.new(
-    name: name_pillow.sample,
-    description: description,
-    address: Faker::Address.full_address,
-    category: category.sample,
-    image: image_pillow.sample
-  )
-  pillow.save!
-end
-
-10.times do
-  booking = Booking.new(
-    start_date: "#{date}",
-    end_date: "#{date}"
-  )
-  booking.save!
-end
+User.destroy_all
+Pillow.destroy_all
+puts 'Oh data destroyed'
 
 10.times do
   user = User.new(
@@ -63,10 +40,33 @@ end
 end
 
 10.times do
-  review = Review.new(
-    content: content.sample,
-    rating: rand(1..5)
+  pillow = Pillow.new(
+    name: name_pillow.sample,
+    description: description,
+    address: Faker::Address.full_address,
+    category: category.sample,
+    image: image_pillow.sample,
+    user_id: User.all.sample.id
   )
-  review.save!
+  pillow.save!
 end
+
+puts 'Oh success!'
+
+# 10.times do
+#   booking = Booking.new(
+#     start_date: "#{date}",
+#     end_date: "#{date}"
+#   )
+#   booking.save!
+# end
+
+
+# 10.times do
+#   review = Review.new(
+#     content: content.sample,
+#     rating: rand(1..5)
+#   )
+#   review.save!
+# end
 
