@@ -1,9 +1,16 @@
-<h1>Those are all our lovely pillow!</h1>
+<div class="wrapper wrapper-margin-top">
+  <h1>Those are all our lovely pillow!</h1>
+  <p>
+    Look! those are all our awesome pellows for you to enjoy! go have a look little man!
+  </p>
+</div>
 
-<div class="container">
-  <div class="row">
-    <% @pillows.each do |pillow| %>
-      <%= render 'shared/card', pillow: pillow %>
-    <% end %>
+<div class="wrapper">
+  <div class="pillow-container-grid">
+    <div class="row">
+      <% @pillows.each do |pillow| %>
+        <%= render 'shared/card', pillow: pillow %>
+      <% end %>
+    </div>
   </div>
 </div>
