@@ -1,5 +1,6 @@
 class PillowsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :new, :create]
+  before_action :find_pillow, only: [:edit, :update, :destroy]
 
   def index
     @pillows = Pillow.all
@@ -22,13 +23,24 @@ class PillowsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @pillow.update(pillow_params)
+    redirect_to pillows_path(@pillow)
+  end
+
   def destroy
-      @pillow = Pillow.find(params[:id])
-      @pillow.destroy
-      redirect_to pillows_path
+    @pillow.destroy
+    redirect_to pillows_path
   end
 
   private
+
+  def find_pillow
+    @pillow = Pillow.find(params[:id])
+  end
 
   def pillow_params
     params.require(:pillow).permit(:address, :category, :name, :photo, :description)
