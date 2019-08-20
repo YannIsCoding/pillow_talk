@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/stympy/faker.git
+  revision: 840cf10c8f2d42d8348a874d2500a617ae635a9c
+  branch: master
+  specs:
+    faker (2.1.2)
+      i18n (>= 0.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -196,6 +204,7 @@ DEPENDENCIES
   bootsnap
   devise
   dotenv-rails
+  faker!
   font-awesome-sass (~> 5.6.1)
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
