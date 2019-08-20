@@ -15,6 +15,7 @@ class PillowsController < ApplicationController
 
   def create
     @pillow = Pillow.new(pillow_params)
+    # @pillow.user_id = current_user.id
     if @pillow.save
       redirect_to pillows_path
     else
@@ -25,6 +26,6 @@ class PillowsController < ApplicationController
   private
 
   def pillow_params
-    params.require(:pillow).permit(:address, :category, :photo)
+    params.require(:pillow).permit(:address, :category, :name, :photo, :description)
   end
 end
