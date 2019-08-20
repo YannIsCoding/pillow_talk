@@ -1,6 +1,10 @@
 class PillowsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :new, :create]
 
-skip_before_action :authenticate_user!, only: [:new, :create]
+  def index
+    @pillows = Pillow.all
+  end
+
   def new
     @pillow = Pillow.new
   end
@@ -19,6 +23,4 @@ skip_before_action :authenticate_user!, only: [:new, :create]
   def pillow_params
     params.require(:pillow).permit(:address, :category, :image)
   end
-
-
 end
