@@ -5,10 +5,14 @@ class BookingsController < ApplicationController
   end
 
   def new
-
+    @booking = Booking.new
   end
 
   def create
+
+    @booking = Booking.new(booking_params)
+    raise
+    @booking.save
 
   end
 
@@ -22,5 +26,11 @@ class BookingsController < ApplicationController
 
   def destroy
 
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date, :pillow_id, :user_id)
   end
 end
