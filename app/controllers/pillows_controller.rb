@@ -23,6 +23,12 @@ class PillowsController < ApplicationController
     end
   end
 
+  def destroy
+      @pillow = Pillow.find(params[:id])
+      @pillow.destroy
+      redirect_to pillows_path
+  end
+
   private
 
   def pillow_params
