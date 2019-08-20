@@ -4,6 +4,8 @@
 <h2>Category: <%= @pillow.category %></h2>ex
 <h2>Address: <%= @pillow.address %></h2>
 
+
+
 <div class="container" id="show-card">
   <%= cl_image_tag(@pillow.photo,
           width: 400, height: 300, crop: :fill) %>
@@ -16,6 +18,7 @@
     <p class="sub-text"><strong>Address:</strong></p>
     <p class="sub-sub-text"> <%= @pillow.address %></p>
     <%= link_to "Edit", edit_pillow_path(@pillow) %>
+    <%= link_to "Remove", pillow_path(@pillow), method: :delete  %>
   </div>
 </div>
 
