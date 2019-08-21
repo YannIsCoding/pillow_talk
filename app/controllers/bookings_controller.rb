@@ -29,6 +29,7 @@ before_action :find_booking, only: [:destroy]
   end
 
   def destroy
+    # raise
     @booking.destroy
     redirect_to bookings_path
   end
@@ -36,7 +37,7 @@ before_action :find_booking, only: [:destroy]
   private
 
   def find_booking
-    @booking = Booking.find(booking_params)
+    @booking = Booking.find(params[:id])
   end
 
   def booking_params

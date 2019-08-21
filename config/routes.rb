@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   resources :pillows do
     resources :bookings, only: [:new, :create]
   end
+
+
+  # delete "bookings/:id", to: "bookings#destroy"
 end
