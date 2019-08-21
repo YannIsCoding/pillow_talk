@@ -5,9 +5,9 @@
   </p>
 </div>
 
-<div class="wrapper">
+<div class="wrapper-index">
   <div class="pillow-container-grid">
-    <div class="row">
+    <div class="row mx-0 p-2 mb-3 justify-content-between">
       <% @pillows.each do |pillow| %>
         <%= render 'shared/card', pillow: pillow %>
       <% end %>
