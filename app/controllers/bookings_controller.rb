@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
-before_action :find_booking, only: [:detroy]
+
+before_action :find_booking, only: [:destroy]
 
   def index
     @bookings = Booking.where(user: current_user)
