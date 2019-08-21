@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   resources :pillows, only: [:index, :new, :show, :create, :update, :edit, :destroy]
   resources :pillows, only: [:index, :new, :show, :create, :update, :edit, :destroy]
-  resources :bookings, only: [:new, :show, :create, :update, :edit, :destroy]
+  resources :bookings, only: [:index, :new, :show, :create, :destroy]
 end
