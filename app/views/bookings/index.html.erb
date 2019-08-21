@@ -12,7 +12,8 @@
   <p> to: <%= booking.end_date %> </p>
   <%= cl_image_tag(booking.pillow.photo,
             width: 200, height: 200, crop: :fill) %>
-  <p> <%= link_to "Details", pillow_path(booking.pillow.id) %></p>
+  <p> <%= link_to "Detail pillow", pillow_path(booking.pillow.id) %></p>
+  <p> <%= link_to "Details booking", booking_path(booking) %></p>
 
 
     <%= link_to "Delete", booking_path(booking),
