@@ -8,3 +8,4 @@ You're booking is confirm!!!!!
 <p>end date:</p> <%= @booking.end_date %> <br>
 <%= link_to 'see all your bookings', bookings_path  %>
   <%= link_to 'home', root_path %>
+  <%= link_to 'add review', new_booking_review_path(@booking)  %>
