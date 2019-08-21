@@ -1,6 +1,6 @@
 <h1>Overview of your Bookings</h1>
 
-<p>Bookings made with: <%= @bookings.first.user.email%></p>
+<p>Bookings made with: <%= @user.email%></p>
 
 <% @bookings.each do |booking| %>
   <h3> <%= booking.pillow.name %> </h3>

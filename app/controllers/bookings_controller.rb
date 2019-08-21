@@ -4,6 +4,7 @@ before_action :find_booking, only: [:destroy]
 
   def index
     @bookings = Booking.where(user: current_user)
+    @user = current_user
   end
 
   def show
