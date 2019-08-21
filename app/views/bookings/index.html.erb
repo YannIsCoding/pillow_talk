@@ -1,0 +1,12 @@
+<h1>Overview of your Bookings</h1>
+
+<p>Bookings made with: <%= @bookings.first.user.email%></p>
+
+<% @bookings.each do |booking| %>
+  <h3> <%= booking.pillow.name %> </h3>
+  <p> from: <%= booking.start_date %>  </p>
+  <p> to: <%= booking.end_date %> </p>
+  <%= cl_image_tag(booking.pillow.photo,
+            width: 200, height: 200, crop: :fill) %>
+  <p><%= link_to "Details", pillows_path(booking.pillow_id) %> <%= link_to "Delete", bookings_path(booking) %></p>
+<% end %>
