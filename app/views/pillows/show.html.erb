@@ -19,6 +19,7 @@
     <p class="sub-sub-text"> <%= @pillow.address %></p>
     <%= link_to "Edit", edit_pillow_path(@pillow) %>
     <%= link_to "Remove", pillow_path(@pillow), method: :delete  %>
+    <%= link_to "Book this pellow!", new_pillow_booking_path(@pillow) %>
   </div>
 </div>
 
