@@ -2,11 +2,21 @@
 
 <p>Bookings made with: <%= @user.email%></p>
 
+<% if @bookings.empty? %>
+  <p> Sorry no Bookings yet 😥</p>
+  <p> <%= link_to "Browse our Pillows 🤪", pillows_path %></p>
+<% else %>
 <% @bookings.each do |booking| %>
   <h3> <%= booking.pillow.name %> </h3>
   <p> from: <%= booking.start_date %>  </p>
   <p> to: <%= booking.end_date %> </p>
   <%= cl_image_tag(booking.pillow.photo,
             width: 200, height: 200, crop: :fill) %>
-  <p><%= link_to "Details", pillows_path(booking.pillow_id) %> <%= link_to "Delete", bookings_path(booking) %></p>
+  <p> <%= link_to "Details", pillow_path(booking.pillow.id) %></p>
+
+
+    <%= link_to "Delete", booking_path(booking),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+  <% end %>
 <% end %>
