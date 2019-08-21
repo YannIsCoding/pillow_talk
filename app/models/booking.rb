@@ -3,4 +3,5 @@ class Booking < ApplicationRecord
 
   belongs_to :user
   belongs_to :pillow
+  has_one :review
 end

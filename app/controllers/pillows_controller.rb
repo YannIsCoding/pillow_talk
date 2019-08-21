@@ -8,6 +8,7 @@ class PillowsController < ApplicationController
 
   def show
     @pillow = Pillow.find(params[:id])
+    @reviews = Review.where(@pillow)
   end
 
   def new
