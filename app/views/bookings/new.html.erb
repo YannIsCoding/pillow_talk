@@ -1,5 +1,6 @@
 <h1>This is the booking page for the pillows!</h1>
- <%= simple_form_for(@booking) do |f| %>
+
+ <%= simple_form_for([@pillow, @booking]) do |f| %>
       <%= f.error_notification %>
      <div class=“form-inputs”>
        <%= f.input :start_date %>
