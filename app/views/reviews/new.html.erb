@@ -1,5 +1,5 @@
 <h3>Add a review</h3>
-<%= simple_form_for [cocktail, review] do |f| %>
+<%= simple_form_for [@booking, @review] do |f| %>
   <%= f.input :rating, collection: 0..5 %>
   <%= f.input :content %>
   <%= f.submit class: "btn btn-primary"%>
