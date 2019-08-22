@@ -1,12 +1,10 @@
 class ReviewsController < ApplicationController
-
   def new
     @booking = Booking.find(params[:booking_id])
     @review = Review.new
   end
 
   def create
-    user = current_user
     @booking = Booking.find(params[:booking_id])
     @review = Review.new(review_params)
     @review.booking = @booking
@@ -17,9 +15,7 @@ class ReviewsController < ApplicationController
     end
   end
 
-
   def destroy
-
   end
 
   private

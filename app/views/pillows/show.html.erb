@@ -17,7 +17,13 @@
 
 <p>Reviews:</p>
 <% @reviews.each do |t| %>
-<p><%= t.content %></p>
+  <div class="review-content">
+    <p><%= t.rating %></p>
+    <p><%= t.content %></p>
+  </div>
+  <div class="review-author">
+    <p> <%= t.booking.user.email %></p>
+  </div>
 <% end %>
 
 
