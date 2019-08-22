@@ -1,16 +1,17 @@
 .wrapper {
   width: 1140px;
   margin: 0 auto;
-  background-image: url(image_path("Sheets"));
+  // background-image: url(image_path("Sheets"));
 }
-
+.navbar-wrapper {
+  width: 1140px;
+  margin: 0 auto;
+}
 
 .wrapper-margin-top{
  margin-top: 24px;
- background-color: white;
 }
 
 .wrapper-index{
-  background-color: white;
   border-radius: 4px;
 }
