@@ -1,1 +1,52 @@
 // Specific CSS for your home-page
+h1 {
+  font-family: Bangers;
+  font-size: 60px;
+  margin-bottom: 6px;
+  padding-bottom: 14px;
+  padding-top: 11px;
+  padding-left: 11px;
+  padding-right: 16px;
+}
+
+body {
+  background: white;
+}
+
+.banner {
+  background-image: url(image_path("funky-one"));
+  height: 533px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -140px;
+  margin-right: -140px;
+  background-size: cover;
+}
+
+.button-banner {
+  background: white;
+  border-radius: 9px;
+  text-color: white;
+  width: 177px;
+  text-align: center;
+  padding: 8px;
+  margin-top: 27px;
+  font-size: 25px;
+}
+
+.banner-on-banner {
+  background: white;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-color: black;
+  border: solid;
+  border-radius: 21px;
+}
