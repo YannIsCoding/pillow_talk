@@ -1,5 +1,5 @@
 class PillowsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :new, :create]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :find_pillow, only: [:edit, :update, :destroy]
 
   def index
