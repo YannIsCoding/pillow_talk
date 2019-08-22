@@ -1,30 +1,33 @@
-<h1>Overview of your Bookings</h1>
+<div class="container"><h1>Overview of your Bookings</h1>
 
-<p>Bookings made with: <%= @user.email%></p>
+  <p>Bookings made with: <%= @user.email%></p>
 
-<% if @bookings.empty? %>
-  <p> Sorry no Bookings yet 😥</p>
-  <p> <%= link_to "Browse our Pillows 🤪", pillows_path %></p>
-<% else %>
-<% @bookings.each do |booking| %>
-  <h3> <%= booking.pillow.name %> </h3>
-  <p> from: <%= booking.start_date %>  </p>
-  <p> to: <%= booking.end_date %> </p>
-  <%= cl_image_tag(booking.pillow.photo,
-            width: 200, height: 200, crop: :fill) %>
+  <% if @bookings.empty? %>
+    <p> Sorry no Bookings yet 😥</p>
+    <p> <%= link_to "Browse our Pillows 🤪", pillows_path %></p>
+  <% else %>
+      <% @bookings.each do |booking| %>
+        <div class="booking-container">
+        <h3> <%= booking.pillow.name %> </h3>
+        <p> from: <%= booking.start_date %>  </p>
+        <p> to: <%= booking.end_date %> </p>
+        <p><%= cl_image_tag(booking.pillow.photo,
+                  width: 200, height: 200, crop: :fill) %></p>
 
-    <div class="d-flex px-3 my-5 justify-content-around">
-      <div class="button-detail">
-        <%= link_to "Detail pillow", pillow_path(booking.pillow.id) %>
-      </div>
-      <div class="button-detail">
-        <%= link_to "Details booking", booking_path(booking) %>
-      </div>
-      <div class="button-detail">
-        <%= link_to "Delete", booking_path(booking),
-          method: :delete,
-          data: { confirm: "Are you sure?" } %>
-      </div>
-    </div>
+          <div class="d-flex px-3 my-5 justify-content-around">
+            <div class="button-detail">
+              <%= link_to "Detail pillow", pillow_path(booking.pillow.id) %>
+            </div>
+            <div class="button-detail">
+              <%= link_to "Details booking", booking_path(booking) %>
+            </div>
+            <div class="button-detail">
+              <%= link_to "Delete", booking_path(booking),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+            </div>
+          </div>
+        </div>
+      <% end %>
   <% end %>
-<% end %>
+</div>
