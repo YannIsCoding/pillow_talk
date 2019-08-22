@@ -38,7 +38,11 @@
       <div class="card-product-infos">
         <h5><%= t.booking.user.email %></h5>
         <p><%= t.content %></p>
-        <p><%= t.rating %></p>
+        <% counter = 0 %>
+        <% 5.times do %>
+        <i class="fa <%= t.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
+         <% counter += 1 %>
+          <% end %>
       </div>
         <% end %>
 </div>
