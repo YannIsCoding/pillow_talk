@@ -9,6 +9,18 @@
   box-shadow: 0 15px 35px #4351C6,0 5px 15px rgba(0,0,0,.07);
     }
 }
+.card-pillow-show{
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 4px;
+  padding: 16px;
+  img{
+    background-size: cover;
+    height: 422px;
+    width: 445px;
+    background-position: 50%;
+    margin: auto;
+  }
+}
 
 .pillow-card-content{
   padding: 15px;
@@ -32,10 +44,5 @@
   background-position: 50%;
   border-radius: 4px;
   margin: 4px;
-}
-
-.pillow-card-info{
-  // display: flex;
-  // justify-content: space-between;
 }
 
