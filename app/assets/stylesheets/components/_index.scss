@@ -12,3 +12,12 @@
 a {
   text-decoration: none !important;
 }
+
+#center-top {
+  text-align: center;
+}
+
+.funky-pic {
+  background-image: url(image_path("dark-funky"));
+  height: 19px;
+}

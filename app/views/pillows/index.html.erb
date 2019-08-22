@@ -1,16 +1,17 @@
-<div class="wrapper wrapper-margin-top">
-  <h1>Those are all our lovely pillow!</h1>
-  <p>
-    Look! those are all our awesome pellows for you to enjoy! go have a look little man!
-  </p>
+<div class="wrapper wrapper-margin-top" id="center-top">
+  <p class="funky-pic">.</p>
+    <h1>Dicover our terrific pillows</h1>
+    <p>
+      And please don't get distracted by our awesome 90's design
+    </p>
+  <p class="funky-pic">.</p>
 </div>
 
-<div class="wrapper-index">
-  <div class="pillow-container-grid">
-    <div class="row p-2 mb-3 justify-content-between">
-      <% @pillows.each do |pillow| %>
-        <%= render 'shared/card', pillow: pillow %>
-      <% end %>
-    </div>
+
+<div class="pillow-container-grid">
+  <div class="row p-2 mb-3 justify-content-between">
+    <% @pillows.each do |pillow| %>
+    <%= render 'shared/card', pillow: pillow %>
+    <% end %>
   </div>
 </div>
