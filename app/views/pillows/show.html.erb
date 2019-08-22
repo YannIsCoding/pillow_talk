@@ -15,15 +15,14 @@
   </div>
 </div>
 
-<p>Reviews:</p>
-<% @reviews.each do |t| %>
-  <div class="review-content">
-    <p><%= t.rating %></p>
-    <p><%= t.content %></p>
-  </div>
-  <div class="review-author">
-    <p> <%= t.booking.user.email %></p>
-  </div>
-<% end %>
 
-
+ <div class="review-container">
+  <h4>Reviews</h4>
+      <% @reviews.each do |t| %>
+      <div class="card-product-infos">
+        <h5><%= t.booking.user.email %></h5>
+        <p><%= t.content %></p>
+        <p><%= t.rating %></p>
+      </div>
+        <% end %>
+</div>
