@@ -17,12 +17,14 @@
     </div>
 
           <div class="d-flex px-3 justify-content-around">
+            <% if current_user == @pillow.id%>
             <div class="button-detail">
               <%= link_to "Edit", edit_pillow_path(@pillow) %>
             </div>
             <div class="button-detail">
               <%= link_to "Remove", pillow_path(@pillow), method: :delete  %>
             </div>
+            <% end %>
             <div class="button-detail">
               <%= link_to "Book this pillow!", new_pillow_booking_path(@pillow) %>
             </div>
