@@ -9,9 +9,18 @@
     <p class="sub-sub-text"> <%= @pillow.category %></p>
     <p class="sub-text"><strong>Address:</strong></p>
     <p class="sub-sub-text"> <%= @pillow.address %></p>
-    <%= link_to "Edit", edit_pillow_path(@pillow) %>
-    <%= link_to "Remove", pillow_path(@pillow), method: :delete  %>
-    <%= link_to "Book this pillow!", new_pillow_booking_path(@pillow) %>
+
+    <div class="d-flex px-3 justify-content-around">
+      <div class="button-detail">
+        <%= link_to "Edit", edit_pillow_path(@pillow) %>
+      </div>
+      <div class="button-detail">
+        <%= link_to "Remove", pillow_path(@pillow), method: :delete  %>
+      </div>
+      <div class="button-detail">
+        <%= link_to "Book this pillow!", new_pillow_booking_path(@pillow) %>
+      </div>
+    </div>
   </div>
 </div>
 

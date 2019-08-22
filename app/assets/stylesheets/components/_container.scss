@@ -1,11 +1,10 @@
 .info-booking-container{
   display: flex;
   flex-direction: column;
-  width: 600px;
   border: 1px solid rgb(235, 235, 235);
   border-radius: 4px;
   margin: 8px;
-  padding: 8px
+  padding: 8px;
 }
 
 .date-booking-container{
@@ -14,7 +13,7 @@
   width: 400px;
   border: 1px solid rgb(235, 235, 235);
   border-radius: 4px;
-  margin: 8px;
+  margin: auto;
   padding: 8px;
   vertical-align: baseline;
 }

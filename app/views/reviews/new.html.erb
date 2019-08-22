@@ -1,6 +1,8 @@
-<h3>Add a review</h3>
-<%= simple_form_for [@booking, @review] do |f| %>
-  <%= f.input :rating, collection: 0..5 %>
-  <%= f.input :content %>
-  <%= f.submit class: "btn btn-primary"%>
-<% end %>
+<h1 class='wrapper-margin-top title-form'>Add a review</h3>
+<div class="form-container">
+  <%= simple_form_for [@booking, @review] do |f| %>
+    <%= f.input :rating, collection: 0..5 %>
+    <%= f.input :content %>
+    <%= f.submit class: "button-detail"%>
+  <% end %>
+</div>
