@@ -3,13 +3,19 @@
   background-color: white;
   border-radius: 9px;
 }
-
-.text {
-  padding-left: 47px;
-}
-
 #h1 {
   margin-bottom: 15px;
   margin-top: 15px;
 }
 
+.review-container {
+  margin: 200px;
+}
+
+.card-product-infos {
+  overflow: hidden;
+  height: 120px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 15px 0px;
+  padding: 10px;
+}
