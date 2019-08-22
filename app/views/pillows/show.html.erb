@@ -1,26 +1,33 @@
-<div class="container" id="show-card">
-  <%= cl_image_tag(@pillow.photo,
-          width: 400, height: 300, crop: :fill) %>
-  <div class="text">
-    <h1 id="h1"><%= @pillow.name %></h1>
-    <p class="sub-text"><strong>Description:</strong></p>
-    <p class="sub-sub-text"> <%= @pillow.description %></p>
-    <p class="sub-text"><strong>Category:</strong></p>
-    <p class="sub-sub-text"> <%= @pillow.category %></p>
-    <p class="sub-text"><strong>Address:</strong></p>
-    <p class="sub-sub-text"> <%= @pillow.address %></p>
+<div class="wrapper-index wrapper-margin-top container">
+  <div class="pillow-container-grid card-pillow-show">
+    <div class="row d-flex p-2 mb-3 justify-content-between">
 
-    <div class="d-flex px-3 justify-content-around">
-      <div class="button-detail">
-        <%= link_to "Edit", edit_pillow_path(@pillow) %>
-      </div>
-      <div class="button-detail">
-        <%= link_to "Remove", pillow_path(@pillow), method: :delete  %>
-      </div>
-      <div class="button-detail">
-        <%= link_to "Book this pillow!", new_pillow_booking_path(@pillow) %>
+      <%= cl_image_tag(@pillow.photo,
+               crop: :fill) %>
+
+      <div class="">
+        <h1 id="h1"><%= @pillow.name %></h1>
+        <p class="sub-text"><strong>Description:</strong></p>
+        <p class="sub-sub-text"> <%= @pillow.description %></p>
+        <p class="sub-text"><strong>Category:</strong></p>
+        <p class="sub-sub-text"> <%= @pillow.category %></p>
+        <p class="sub-text"><strong>Address:</strong></p>
+        <p class="sub-sub-text"> <%= @pillow.address %></p>
       </div>
     </div>
+
+          <div class="d-flex px-3 justify-content-around">
+            <div class="button-detail">
+              <%= link_to "Edit", edit_pillow_path(@pillow) %>
+            </div>
+            <div class="button-detail">
+              <%= link_to "Remove", pillow_path(@pillow), method: :delete  %>
+            </div>
+            <div class="button-detail">
+              <%= link_to "Book this pillow!", new_pillow_booking_path(@pillow) %>
+            </div>
+          </div>
+
   </div>
 </div>
 
@@ -35,3 +42,4 @@
       </div>
         <% end %>
 </div>
+
