@@ -1,4 +1,14 @@
 
 
-
-
+.button-detail {
+  background: black;
+  border-radius: 9px;
+  width: 177px;
+  text-align: center;
+  padding: 12px;
+  font-size: 22px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}

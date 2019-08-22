@@ -1,11 +1,34 @@
-<h1>Chunky bacon booking!</h1>
-<p>
-You're booking is confirm!!!!!
-</p>
-<p>booking id:</p> <%= @booking.id %> <br>
-<p>pillow name:</p> <%= @booking.pillow.name %> <br>
-<p>start date: </p> <%= @booking.start_date %> <br>
-<p>end date:</p> <%= @booking.end_date %> <br>
-<%= link_to 'see all your bookings', bookings_path  %>
-  <%= link_to 'home', root_path %>
-  <%= link_to 'add review', new_booking_review_path(@booking)  %>
+<div class="wrapper-margin-top wrapper-w800">
+  <h1>You're booking is confirm!</h1>
+  <p>Congratulation, you're booking for the pillow "<%= @booking.pillow.name %>" is confirmed!</p>
+
+  <h3> <%= @booking.pillow.category %></h3>
+  <h2> <%= @booking.pillow.name %> </h2>
+
+  <div class="info-booking-container">
+    <div class="d-flex flex-column">
+      <p>booking number:</p> <%= @booking.id %>
+      <p>description:</p>
+      <p>
+        <%= @booking.pillow.description %>
+      </p>
+    </div>
+    <div class="date-booking-container">
+      <div class="start-date">
+        <p>start date: </p> <%= @booking.start_date %> <br>
+      </div>
+      <div class="end-date">
+        <p>end date: </p> <%= @booking.end_date %> <br>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <div class="d-flex px-3 justify-content-around">
+    <div class="button-detail">
+      <%= link_to 'See all your bookings', bookings_path  %>
+    </div>
+    <div class="button-detail">
+      <%= link_to 'Add review', new_booking_review_path(@booking)  %>
+  </div>
+</div>
