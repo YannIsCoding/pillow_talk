@@ -4,9 +4,16 @@
   font-size: 60px;
   margin-bottom: 6px;
   padding-bottom: 14px;
-  padding-top: 11px;
+  padding-top: 22px;
   padding-left: 11px;
   padding-right: 16px;
+}
+
+#h3-style {
+  font-size: 2rem;
+  text-align: center;
+  width: 666px;
+  margin: auto;
 }
 
 body {
@@ -23,6 +30,9 @@ body {
   margin-left: -140px;
   margin-right: -140px;
   background-size: cover;
+  margin-bottom: 51px;
+  margin-top: 20px;
+
 }
 
 .button-banner {
@@ -32,8 +42,15 @@ body {
   width: 177px;
   text-align: center;
   padding: 8px;
-  margin-top: 27px;
+  margin-top: 18px;
   font-size: 25px;
+}
+
+.subtext {
+  background-color: #FFC3BB;
+  margin-left: -140px;
+  margin-right: -140px;
+  padding: 40px;
 }
 
 .banner-on-banner {
@@ -51,6 +68,20 @@ body {
   border-radius: 21px;
 }
 
+.gif  {
+  text-align: center;
+}
+
+#ul-home {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 14px;
+  margin-left: -140px;
+  margin-right: -140px;
+  border: solid;
+  border-color: #4351C6;
+}
   h2 {
     color: rgb(72, 72, 72);
   }
@@ -63,3 +94,4 @@ body {
   img{
     border-radius: 8px;
   }
+
