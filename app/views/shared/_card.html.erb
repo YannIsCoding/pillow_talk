@@ -1,15 +1,24 @@
 <%= link_to pillow_path(pillow.id), :action => 'go' do %>
-  <div class='card-pillow mb-3'>
+<!--   <div class='card-pillow mb-3'>
 
-    <div class="pillow-card-cover" style='background-image: url(<%= pillow.photo %>)'>
-
-    </div>
     <div class="pillow-card-content">
+        <#%= cl_image_tag pillow.photo, alt: "alttext" %>
       <div class="pillow-card-info">
-        <h2 class='pillow-name'> <%= pillow.name %> </h2>
+        <h2 class='pillow-name'> <%#= pillow.name %> </h2>
         <h3 class='pillow-category'> <%= pillow.category %></h3>
+        <p class='pillow-description'> <%= pillow.description %> </p>
       </div>
-      <p class='pillow-description'> <%= pillow.description %> </p>
     </div>
+  </div> -->
+<div class='card-pillow'>
+  <div class='pillow-card-image' style='background-image: url(<%= pillow.photo %>)'>
+
   </div>
+  <div class="pillow-card-content">
+    <h3> <%= pillow.category %> </h3>
+    <h2> <%= pillow.name %> </h2>
+    <p> <%= pillow.description %> </p>
+  </div>
+</div>
+
 <% end %>
