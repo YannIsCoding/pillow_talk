@@ -38,7 +38,7 @@
   <h4>Reviews</h4>
       <% @reviews.each do |t| %>
       <div class="card-product-infos">
-        <h5><%= t.booking.user.email %></h5>
+        <h5><%= t.booking.user.full_name %></h5>
         <p><%= t.content %></p>
         <% counter = 0 %>
         <% 5.times do %>
