@@ -5,6 +5,7 @@
   border-radius: 4px;
   margin-bottom: 20px;
   background-color: #FFC3BB;
+  transition: box-shadow .2s ease;
     &:hover {
   box-shadow: 0 15px 35px #4351C6,0 5px 15px rgba(0,0,0,.07);
     }
