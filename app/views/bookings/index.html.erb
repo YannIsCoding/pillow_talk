@@ -8,12 +8,16 @@
   <% else %>
       <% @bookings.each do |booking| %>
         <div class="booking-container">
-        <h3> <%= booking.pillow.name %> </h3>
-        <p> from: <%= booking.start_date %>  </p>
-        <p> to: <%= booking.end_date %> </p>
-        <p><%= cl_image_tag(booking.pillow.photo,
-                  width: 200, height: 200, crop: :fill) %></p>
-
+          <div class="card-booking-product">
+            <%= cl_image_tag(booking.pillow.photo,
+                  width: 300, height: 300, crop: :fill) %>
+            <div class="card-booking-info">
+              <h3> <%= booking.pillow.name %> </h3>
+              <p> from: <%= booking.start_date %>  </p>
+              <p> to: <%= booking.end_date %> </p>
+              <p>Price per night € <%= booking.pillow.price %></p>
+            </div>
+          </div>
           <div class="d-flex px-3 my-5 justify-content-around">
             <div class="button-detail">
               <%= link_to "Detail pillow", pillow_path(booking.pillow.id) %>
