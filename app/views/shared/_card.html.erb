@@ -18,6 +18,17 @@
     <h3> <%= pillow.category %> </h3>
     <h2> <%= pillow.name %> </h2>
     <p> <%= pillow.description %> </p>
+    <% if @reviews.empty? %>
+      <i class="far fa-star"> new pillow </i>
+    <% else %>
+      <% @reviews.each do |t| %>
+        <% counter = 0 %>
+        <% 5.times do %>
+          <i class="fa <%= t.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
+           <% counter += 1 %>
+        <% end %>
+      <% end %>
+    <% end %>
     <p> <%= pillow.price %> €</p>
   </div>
 </div>
