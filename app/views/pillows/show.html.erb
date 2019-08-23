@@ -13,8 +13,9 @@
         <h4><strong>Category:</strong></h4>
         <p class="sub-sub-text"> <%= @pillow.category %></p>
 
+
         <h4><strong>Address:</strong></h4>
-        <p class="sub-sub-text"> <%= @pillow.address %></p>
+        <p class="sub-sub-text"> <%= link_to @pillow.address, "https://www.google.de/maps/search/#{@pillow.address}", target: :blank %> </p>
 
         <h4><strong>rating:</strong></h4>
         <p class="sub-sub-text"> 5 stars</p>
