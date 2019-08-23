@@ -4,7 +4,6 @@ class PillowsController < ApplicationController
 
   def index
     @pillows = Pillow.all
-    @average_review = average_review
   end
 
   def show
@@ -39,15 +38,6 @@ class PillowsController < ApplicationController
   end
 
   private
-
-  def average_review
-    reviews = Review.where(params[:pillow_id])
-    review_sum = 0
-    reviews.each do |review|
-      review_sum += review.rating
-    end
-    review_sum / reviews.count
-  end
 
   def find_pillow
     @pillow = Pillow.find(params[:id])
