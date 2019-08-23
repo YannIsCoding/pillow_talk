@@ -3,7 +3,8 @@
   flex-direction: column;
   border: 1px solid rgb(235, 235, 235);
   border-radius: 4px;
-  margin: 16px;
+  margin-bottom: 40px;
+  margin-top: 20px;
   padding: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -14,7 +15,6 @@
   width: 400px;
   border: 1px solid rgb(235, 235, 235);
   border-radius: 4px;
-  margin: auto;
   padding: 8px;
   vertical-align: baseline;
 }
@@ -26,6 +26,5 @@
 }
 
 .container-flex-inline{
-  display: flex;
-  justify-content: space-between;
+display: block
 }
