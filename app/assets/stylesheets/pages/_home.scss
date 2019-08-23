@@ -31,14 +31,18 @@ body {
 }
 
 .button-banner {
-  background: white;
+  background: #FFC3BB;
   border-radius: 9px;
   text-color: white;
   width: 177px;
   text-align: center;
   padding: 8px;
   margin-top: 18px;
-  font-size: 25px;
+  font-size: 29px;
+  font-weight: 900;
+  &:hover {
+      background: #5dd3ca;
+    }
 }
 
 .subtext {
