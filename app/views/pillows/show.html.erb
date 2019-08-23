@@ -5,14 +5,20 @@
       <%= cl_image_tag(@pillow.photo,
                crop: :fill) %>
 
-      <div class="">
+      <div class="container-flex-inline">
         <h1 id="h1"><%= @pillow.name %></h1>
-        <p class="sub-text"><strong>Description:</strong></p>
+        <h4><strong>Description:</strong></h4>
         <p class="sub-sub-text"> <%= @pillow.description %></p>
-        <p class="sub-text"><strong>Category:</strong></p>
+
+        <h4><strong>Category:</strong></h4>
         <p class="sub-sub-text"> <%= @pillow.category %></p>
-        <p class="sub-text"><strong>Address:</strong></p>
+
+        <h4><strong>Address:</strong></h4>
         <p class="sub-sub-text"> <%= @pillow.address %></p>
+
+        <h4><strong>rating:</strong></h4>
+        <p class="sub-sub-text"> 5 stars</p>
+
       </div>
     </div>
 
@@ -31,21 +37,19 @@
           </div>
 
   </div>
-</div>
 
-
- <div class="review-container">
-  <h4>Reviews</h4>
-      <% @reviews.each do |t| %>
-      <div class="card-product-infos">
-        <h5><%= t.booking.user.full_name %></h5>
-        <p><%= t.content %></p>
-        <% counter = 0 %>
-        <% 5.times do %>
-        <i class="fa <%= t.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
-         <% counter += 1 %>
-          <% end %>
-      </div>
+   <div style='margin-top: 50px;'>
+    <h4>Reviews</h4>
+        <% @reviews.each do |t| %>
+          <div class="card-product-infos">
+            <h5><%= t.booking.user.full_name %></h5>
+            <p><%= t.content %></p>
+            <% counter = 0 %>
+            <% 5.times do %>
+              <i class="fa <%= t.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
+               <% counter += 1 %>
+            <% end %>
+          </div>
         <% end %>
+  </div>
 </div>
-
