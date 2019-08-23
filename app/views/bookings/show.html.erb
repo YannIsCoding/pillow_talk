@@ -1,19 +1,21 @@
 <div class="wrapper-margin-top wrapper-w800 wrapper-margin-top">
   <h1>You're booking is confirm!</h1>
-  <p>Congratulation, you're booking for the pillow "<%= @booking.pillow.name %>" is confirmed!</p>
+  <p>Congratulation, you're booking for the pillow <strong>"<%= @booking.pillow.name %>"</strong> is confirmed!</p>
 
-  <h3> <%= @booking.pillow.category %></h3>
-  <h2> <%= @booking.pillow.name %> </h2>
 
   <div class="info-booking-container">
     <div class="d-flex flex-column">
-      <p>booking number: <%= @booking.id %> </p>
-      <p>description:</p>
+      <h2> <%= @booking.pillow.name %> </h2>
+      <p>Booking number: <%= @booking.id %> </p>
+      <h5>Description</h5>
       <p>
         <%= @booking.pillow.description %>
       </p>
+      <h5>Category</h5>
+      <p> <%= @booking.pillow.category %></>
     </div>
     <div class="date-booking-container">
+      <h5>Dates</h5>
       <div class="start-date">
         <p>start date: </p> <%= @booking.start_date %> <br>
       </div>
