@@ -3,6 +3,10 @@
    <%= simple_form_for([@pillow, @booking]) do |f| %>
     <%= f.error_notification %>
     <div class=“form-inputs”>
+      <div class="container-flex-inline">
+      <h4>For pillow: </h4> <p> <%= @pillow.name %></p>
+      </div>
+      <h4>Address: </h4> <p> <%= @pillow.address %> </p>
       <%= f.input :start_date %>
       <%= f.input :end_date %>
     </div>
