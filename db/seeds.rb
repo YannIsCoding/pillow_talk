@@ -59,6 +59,7 @@ image_pillow.each do |p|
     address: Faker::Address.full_address,
     category: category.sample,
     remote_photo_url: p,
+    price: rand(10..30),
     user_id: User.all.sample.id
   )
   pillow.save!
